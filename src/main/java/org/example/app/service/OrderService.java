@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class OrderService {
+
     @Autowired
     private OrderRepository repository;
 
@@ -25,12 +26,11 @@ public class OrderService {
         return repository.save(order);
     }
 
-    public void deleteOrder(Long id) {
-        repository.deleteById(id);
-    }
-
     public Order updateOrder(Order order) {
         return repository.save(order);
     }
-}
 
+    public void deleteOrder(Long id) {
+        repository.deleteById(id);
+    }
+}

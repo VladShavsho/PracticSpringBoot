@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "`order`")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +25,7 @@ public class Order {
     private List<Product> products;
 
     private LocalDateTime createdAt;
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

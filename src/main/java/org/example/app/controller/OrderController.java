@@ -28,8 +28,9 @@ public class OrderController {
         return service.addOrder(order);
     }
 
-    @PutMapping
-    public Order updateOrder(@RequestBody Order order) {
+    @PutMapping("/{id}")
+    public Order updateOrder(@PathVariable Long id, @RequestBody Order order) {
+        order.setId(id);
         return service.updateOrder(order);
     }
 
